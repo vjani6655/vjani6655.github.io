@@ -1,0 +1,146 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+	<meta charset="UTF-8">
+	<title>Restaurant Picker</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<link rel="stylesheet" href="jquery.mobile.structure-1.0.1.css" />
+	<link rel="apple-touch-icon" href="images/launch_icon_57.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="images/launch_icon_72.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="images/launch_icon_114.png" />
+	<link rel="stylesheet" href="jquery.mobile-1.0.1.css" />
+	<link rel="stylesheet" href="custom.css" />
+	<script src="js/jquery-1.7.1.min.js"></script>
+	<script src="js/jquery.mobile-1.0.1.min.js"></script>
+	<meta name="theme-color" content="#2c3e50">
+	<link rel="icon"  href="http://www.vjani.com/restraunt/images/Favicon.ico" />
+	<link rel="shortcut icon" href="http://www.vjani.com/restraunt/images/Favicon.ico" />
+</head> 
+<body> 
+<div id="restau" data-role="page" data-add-back-btn="true">
+	
+	<div data-role="header"> 
+		<h1>Teppanyaki</h1>
+	</div> 
+	
+	<div data-role="content">
+	<div class="ui-grid-a" id="restau_infos">	
+		<div class="ui-block-a">
+		
+		
+			
+		</div>		
+		<div class="ui-block-b">
+		
+		</div>
+	</div><!-- /grid-a -->
+
+	
+	<div id="notation">	
+	
+	</div>
+	
+	
+	<hr/>
+	
+	<div class="ui-grid-a" id="contact_infos">	
+		
+	</div><!-- /grid-a -->
+	<div id="contact_buttons">	
+		<a href="#"  data-role="button"> Menu </a>	
+	</div>
+	<hr/>
+	
+	<div data-role="collapsible">
+		<h4>Vegetarian</h4>
+		
+		<div data-role="collapsible" data-inset="false" data-theme="c" data-content-theme="d">
+			<h4>Margarita</h4>
+			<p>This is a Vegetarian dish made with bread and cheese with some herbs and sauces</p>
+		</div>
+		
+		<div data-role="collapsible" data-inset="false" data-theme="c" data-content-theme="d">
+			<h4>Greek Salad</h4>
+			<p>This is a Vegetarian dish made with salad</p>
+		</div>
+		
+		<div data-role="collapsible" data-inset="false" data-theme="c" data-content-theme="d">
+			<h4>Sweet Corn</h4>
+			<p>This is a Vegetarian dish made with corn and butter and some herbs and spices</p>
+		</div>
+		
+	</div>	
+	
+	<div data-role="collapsible">
+		<h4>Non-Vegetarian</h4>
+		
+		<div data-role="collapsible" data-inset="false" data-theme="c" data-content-theme="d">
+			<h4>Tandoori Chicken</h4>
+			<p>This is a Non-vegetarian dish made with grilled chicken and some sauces and spices</p>
+		</div>
+		
+		<div data-role="collapsible" data-inset="false" data-theme="c" data-content-theme="d">
+			<h4>Linguini Seafood</h4>
+			<p>This is a Non-vegetarian dish made with sea food you can select any items from prawn, lobster, fish, and crab</p>
+		</div>
+		
+		<div data-role="collapsible" data-inset="false" data-theme="c" data-content-theme="d">
+			<h4>Pumpkin Gnocchi</h4>
+			<p>This is a Non-vegetarian dish</p>
+		</div>
+		
+	</div>	
+	
+	
+	
+	
+	
+	
+	<hr/>
+	
+	<div id="notation">	
+	<p><strong>From Listraunt</strong></p>
+		<div id="contact_buttons">	
+		
+			
+	</div>	
+	</div>
+	
+	<div id="notation">	
+	<p><strong></strong></p>
+		<div id="contact_buttons">	
+		<a href="contactus.html" data-role="button" > Contact Us </a> 	
+			
+	</div>	
+	</div>
+	
+	
+
+
+	<script type="text/javascript">
+
+	$( '#restau' ).live( 'pageinit',function(event){
+		var SelectedOptionClass = $('option:selected').attr('class');
+		$('div.ui-select').addClass(SelectedOptionClass);
+		
+		$('#note_utilisateur').live('change', function(){	 
+			$('div.ui-select').removeClass(SelectedOptionClass);
+			
+			SelectedOptionClass = $('option:selected').attr('class');
+			$('div.ui-select').addClass(SelectedOptionClass);		
+			
+		 });
+		
+	  
+	});
+
+	</script>
+	
+
+	</div>
+
+
+</div><!-- /page -->
+</body>
+</html>
+</html>
